@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PortageJeuJFX</string>
+
+    <!-- Main menu strings-->
+    <string name="playMenu">Jouer</string>
+    <string name="parametersMenu">Paramètres</string>
+    <string name="titreMenu">Titre</string>
+</resources>
