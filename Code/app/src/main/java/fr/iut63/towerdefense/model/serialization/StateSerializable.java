@@ -1,4 +1,4 @@
-package model.serialization;
+package fr.iut63.towerdefense.model.serialization;
 
 import java.io.Serializable;
 

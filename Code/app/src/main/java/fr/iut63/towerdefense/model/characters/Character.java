@@ -1,8 +1,9 @@
-package model.characters;
+package fr.iut63.towerdefense.model.characters;
 
-import model.Coordinate;
 
 import java.util.ArrayList;
+
+import fr.iut63.towerdefense.model.Coordinate;
 
 /**
  * Caractère (ennemis)

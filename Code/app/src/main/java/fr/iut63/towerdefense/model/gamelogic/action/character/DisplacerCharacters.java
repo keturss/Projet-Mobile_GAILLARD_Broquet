@@ -1,14 +1,16 @@
-package model.gamelogic.action.character;
-import model.characters.Character;
-import model.characters.monster.Monster;
-import model.gamelogic.GameState;
-import model.gamelogic.action.IDisplacer;
-import model.gamelogic.action.IRemover;
-import model.gamelogic.action.character.monster.RemoverMonster;
-import model.gamelogic.action.states.Updater;
+package fr.iut63.towerdefense.model.gamelogic.action.character;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+
+import fr.iut63.towerdefense.model.characters.Character;
+import fr.iut63.towerdefense.model.characters.monster.Monster;
+import fr.iut63.towerdefense.model.gamelogic.GameState;
+import fr.iut63.towerdefense.model.gamelogic.action.IDisplacer;
+import fr.iut63.towerdefense.model.gamelogic.action.IRemover;
+import fr.iut63.towerdefense.model.gamelogic.action.character.monster.RemoverMonster;
+import fr.iut63.towerdefense.model.gamelogic.action.states.Updater;
 
 /**
  * Déplaceur de caractères
@@ -27,7 +29,7 @@ public class DisplacerCharacters implements IDisplacer {
     @Override
     public boolean updateLocations() {
         ArrayList<Character> charactersEnd = new ArrayList<>();
-        var listCharacters = game.getCharactersAlive();
+        List<Character> listCharacters = game.getCharactersAlive();
         if (!listCharacters.isEmpty()) {
             Iterator<Character> characterIterator = listCharacters.iterator();
             Character character;

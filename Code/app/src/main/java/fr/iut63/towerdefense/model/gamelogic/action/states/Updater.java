@@ -1,8 +1,8 @@
-package model.gamelogic.action.states;
+package fr.iut63.towerdefense.model.gamelogic.action.states;
 
-import model.characters.Character;
-import model.gamelogic.GameState;
 
+import fr.iut63.towerdefense.model.gamelogic.GameState;
+import fr.iut63.towerdefense.model.characters.Character;
 /**
  * Classe mettant à jour des informations de la partie
  */
@@ -29,8 +29,8 @@ public class Updater {
      * @param game  GameState
      */
     public static void updateTimerSeconds(int timer, long millis, GameState game){
-        var timeMillis = timer * millis;
-        var timeSeconds = (int) (timeMillis / 1000);
+        long timeMillis = timer * millis;
+        int timeSeconds = (int) (timeMillis / 1000);
 
         if (timeSeconds != game.getTimeSeconds()) {
             game.setTimeSeconds(game.getTimeSeconds() + 1);

@@ -1,15 +1,17 @@
-package model.gamelogic;
+package fr.iut63.towerdefense.model.gamelogic;
 
-import model.gamelogic.action.ILevel;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import fr.iut63.towerdefense.model.gamelogic.action.ILevel;
+
 /**
  * Gère les niveaux de la partie
  */
-public class AdministratorLevel implements ILevel{
+public class AdministratorLevel implements ILevel {
     private GameState game;
     private int level;
     private Scanner levelFile;

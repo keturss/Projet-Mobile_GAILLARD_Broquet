@@ -1,8 +1,9 @@
-package model.gamelogic.action.tower;
+package fr.iut63.towerdefense.model.gamelogic.action.tower;
 
-import model.characters.tower.Tower;
 
 import static java.lang.Thread.sleep;
+
+import fr.iut63.towerdefense.model.characters.tower.Tower;
 
 /**
  * Classe permettant de faire attendre la tour durant le temps de construction

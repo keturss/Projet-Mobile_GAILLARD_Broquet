@@ -1,4 +1,4 @@
-package model.characters;
+package fr.iut63.towerdefense.model.characters;
 
 /**
  * Projectile d'une tour

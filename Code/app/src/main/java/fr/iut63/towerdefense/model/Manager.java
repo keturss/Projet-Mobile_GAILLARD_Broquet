@@ -1,11 +1,9 @@
-package model;
+package fr.iut63.towerdefense.model;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import model.serialization.AdministratorPersistence;
-import model.serialization.AdministratorPersistenceBinary;
-import model.gamelogic.GameManager;
-import view.ScreenController;
+
+import fr.iut63.towerdefense.model.gamelogic.GameManager;
+import fr.iut63.towerdefense.model.serialization.AdministratorPersistence;
+import fr.iut63.towerdefense.model.serialization.AdministratorPersistenceBinary;
 
 /**
  * Gestion de l'application
@@ -14,16 +12,16 @@ public class Manager {
     private GameManager gameManager;
     private ScoreRanking scoreRanking;
     private AdministratorPersistence administratorPersistence;
-    private StringProperty pseudo = new SimpleStringProperty();
-        public String getPseudo() {return pseudo.get();}
-        public StringProperty pseudoProperty() {return pseudo;}
-        public void setPseudo(String pseudo) {this.pseudo.set(pseudo);}
+    private String pseudo;
+        public String getPseudo() {return pseudo;}
+        public String pseudoProperty() {return pseudo;}
+        public void setPseudo(String pseudo) {this.pseudo = pseudo;}
 
 
     public Manager(ScoreRanking scoreRanking){
         this.scoreRanking=scoreRanking;
         administratorPersistence = new AdministratorPersistenceBinary();
-        ScreenController.getStage().setOnCloseRequest(event -> saveStates());
+        //ScreenController.getStage().setOnCloseRequest(event -> saveStates());
         administratorPersistence.load(scoreRanking);
     }
 

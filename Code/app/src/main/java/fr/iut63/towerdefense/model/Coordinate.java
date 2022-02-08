@@ -1,21 +1,20 @@
-package model;
+package fr.iut63.towerdefense.model;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+
 
 /**
  * Coordonnées
  */
 public class Coordinate {
 
-    private IntegerProperty x = new SimpleIntegerProperty();
-        public int getX() {return x.get();}
-        public IntegerProperty xProperty() {return x;}
-        public void setX(int x) {this.x.set(x);}
-    private IntegerProperty y = new SimpleIntegerProperty();
-        public int getY() {return y.get();}
-        public IntegerProperty yProperty() {return y;}
-        public void setY(int y) {this.y.set(y);}
+    private int x;
+        public int getX() {return x;}
+        public int xProperty() {return x;}
+        public void setX(int x) {this.x = x ;}
+    private int y;
+        public int getY() {return y;}
+        public int yProperty() {return y;}
+        public void setY(int y) {this.y = y ;}
 
     /**
      * Coordonée sur la map

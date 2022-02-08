@@ -1,6 +1,6 @@
-package model.gamelogic.action;
+package fr.iut63.towerdefense.model.gamelogic.action;
 
-import model.characters.Character;
+import fr.iut63.towerdefense.model.characters.Character;
 
 public interface IRemover {
     void remove(Character character);

@@ -1,10 +1,11 @@
-package model.gamelogic.action.tower;
+package fr.iut63.towerdefense.model.gamelogic.action.tower;
 
-import model.characters.tower.ClassicTower;
-import model.characters.tower.Tower;
-import model.gamelogic.GameState;
-import model.gamelogic.map.Map;
-import model.gamelogic.action.IBuyer;
+
+import fr.iut63.towerdefense.model.characters.tower.ClassicTower;
+import fr.iut63.towerdefense.model.characters.tower.Tower;
+import fr.iut63.towerdefense.model.gamelogic.GameState;
+import fr.iut63.towerdefense.model.gamelogic.action.IBuyer;
+import fr.iut63.towerdefense.model.gamelogic.map.Map;
 
 /**
  * Class permettant d'acheter des tours

@@ -1,4 +1,4 @@
-package model.gamelogic.map;
+package fr.iut63.towerdefense.model.gamelogic.map;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,12 +1,14 @@
-package model.gamelogic.action.character;
+package fr.iut63.towerdefense.model.gamelogic.action.character;
 
-import model.characters.monster.Basic;
-import model.characters.monster.Speed;
-import model.gamelogic.GameState;
-import model.gamelogic.action.ILevel;
-import model.gamelogic.action.ISpawner;
-import model.gamelogic.AdministratorLevel;
+
 import java.util.Scanner;
+
+import fr.iut63.towerdefense.model.characters.monster.Basic;
+import fr.iut63.towerdefense.model.characters.monster.Speed;
+import fr.iut63.towerdefense.model.gamelogic.AdministratorLevel;
+import fr.iut63.towerdefense.model.gamelogic.GameState;
+import fr.iut63.towerdefense.model.gamelogic.action.ILevel;
+import fr.iut63.towerdefense.model.gamelogic.action.ISpawner;
 
 public class SpawnerCharacter implements ISpawner {
 
@@ -28,13 +30,19 @@ public class SpawnerCharacter implements ISpawner {
      * @param timer int Timer de la Boucle de Jeu
      */
     public void spawn(int timer) {
-        if (level instanceof AdministratorLevel administratorLevel) {
-            Scanner scannerFile = administratorLevel.getLevelFile();
+        if (level instanceof AdministratorLevel) {
+            Scanner scannerFile = ((AdministratorLevel) level).getLevelFile();
             if (timer % 40 == 0 && scannerFile.hasNextLine()) {
                 switch (scannerFile.next()) {
-                    case "Basic" -> game.getCharactersAlive().add(new Basic(5));
-                    case "Speed" -> game.getCharactersAlive().add(new Speed(3));
-                    default -> game.getCharactersAlive().add(new Basic(3));
+                    case "Basic":
+                        game.getCharactersAlive().add(new Basic(5));
+                        break;
+                    case "Speed":
+                        game.getCharactersAlive().add(new Speed(3));
+                        break;
+                    default:
+                        game.getCharactersAlive().add(new Basic(3));
+                        break;
                 }
             } else if (!scannerFile.hasNextLine()) {
                 level.nextLevel();

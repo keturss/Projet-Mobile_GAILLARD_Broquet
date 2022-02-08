@@ -1,4 +1,4 @@
-package model.gameloop;
+package fr.iut63.towerdefense.model.gameloop;
 
 import java.util.LinkedList;
 
@@ -21,7 +21,7 @@ public abstract class Observable {
      * @param timer
      */
     protected void notify(int timer){
-        for(var observer : observatory){
+        for(IObserver observer : observatory){
             observer.update(timer);
         }
     }

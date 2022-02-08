@@ -1,17 +1,18 @@
-package model.gamelogic;
+package fr.iut63.towerdefense.model.gamelogic;
 
-import model.gamelogic.action.ILevel;
-import model.gameloop.IObserver;
-import model.gameloop.Loop;
-import model.characters.Character;
-import model.gamelogic.map.Map;
-import model.gamelogic.action.IAttacker;
-import model.gamelogic.action.IDisplacer;
-import model.gamelogic.action.ISpawner;
-import model.gamelogic.action.character.SpawnerCharacter;
-import model.gamelogic.action.tower.AttackerTower;
-import model.gamelogic.action.character.DisplacerCharacters;
-import model.gamelogic.action.states.Updater;
+
+import fr.iut63.towerdefense.model.gamelogic.action.IAttacker;
+import fr.iut63.towerdefense.model.gamelogic.action.IDisplacer;
+import fr.iut63.towerdefense.model.gamelogic.action.ILevel;
+import fr.iut63.towerdefense.model.gamelogic.action.ISpawner;
+import fr.iut63.towerdefense.model.gamelogic.action.character.DisplacerCharacters;
+import fr.iut63.towerdefense.model.gamelogic.action.character.SpawnerCharacter;
+import fr.iut63.towerdefense.model.gamelogic.action.states.Updater;
+import fr.iut63.towerdefense.model.gamelogic.action.tower.AttackerTower;
+import fr.iut63.towerdefense.model.gamelogic.map.Map;
+import fr.iut63.towerdefense.model.gameloop.IObserver;
+import fr.iut63.towerdefense.model.gameloop.Loop;
+import fr.iut63.towerdefense.model.characters.Character;
 
 /**
  * Classe qui gère la partie

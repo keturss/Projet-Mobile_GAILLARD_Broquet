@@ -1,4 +1,4 @@
-package model.characters.tower;
+package fr.iut63.towerdefense.model.characters.tower;
 
 /**
  * Tour classique

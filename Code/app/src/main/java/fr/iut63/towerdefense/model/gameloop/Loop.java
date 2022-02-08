@@ -1,6 +1,5 @@
-package model.gameloop;
+package fr.iut63.towerdefense.model.gameloop;
 
-import javafx.application.Platform;
 import static java.lang.Thread.sleep;
 
 /**
@@ -46,6 +45,6 @@ public class Loop extends Observable implements Runnable {
     }
 
     private void beep(int timer) {
-        Platform.runLater(() -> notify(timer));
+        //Platform.runLater(() -> notify(timer));
     }
 }

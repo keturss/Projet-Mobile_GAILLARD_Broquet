@@ -1,25 +1,271 @@
-package model;
+package fr.iut63.towerdefense.model;
 
-import javafx.beans.property.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import model.gamelogic.GameState;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+import fr.iut63.towerdefense.model.gamelogic.GameState;
 
 /**
  * Classe Score et Ranking permettant de classer le resultat en fonction du score obtenu
  */
 public class ScoreRanking {
-    private final ObservableList<GameState> rankingObservable = FXCollections.observableArrayList();
+    private final List<GameState> rankingObservable = new List<GameState>() {
+        @Override
+        public int size() {
+            return 0;
+        }
 
-    private ListProperty<GameState> ranking = new SimpleListProperty<>(rankingObservable);
-        public ObservableList<GameState> getRanking() {return ranking.get();}
-        public ListProperty<GameState> rankingProperty() {return ranking;}
-        public void setRanking(ObservableList<GameState> ranking) {this.ranking.set(ranking);}
-    private IntegerProperty numberScores = new SimpleIntegerProperty();
-        public int getNumberScores() {return numberScores.get();}
-        public IntegerProperty numberScoresProperty() {return numberScores;}
-        public void setNumberScores(int numberScores) {this.numberScores.set(numberScores);}
+        @Override
+        public boolean isEmpty() {
+            return false;
+        }
+
+        @Override
+        public boolean contains(@Nullable Object o) {
+            return false;
+        }
+
+        @NonNull
+        @Override
+        public Iterator<GameState> iterator() {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public Object[] toArray() {
+            return new Object[0];
+        }
+
+        @NonNull
+        @Override
+        public <T> T[] toArray(@NonNull T[] ts) {
+            return null;
+        }
+
+        @Override
+        public boolean add(GameState gameState) {
+            return false;
+        }
+
+        @Override
+        public boolean remove(@Nullable Object o) {
+            return false;
+        }
+
+        @Override
+        public boolean containsAll(@NonNull Collection<?> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(@NonNull Collection<? extends GameState> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(int i, @NonNull Collection<? extends GameState> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean removeAll(@NonNull Collection<?> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean retainAll(@NonNull Collection<?> collection) {
+            return false;
+        }
+
+        @Override
+        public void clear() {
+
+        }
+
+        @Override
+        public GameState get(int i) {
+            return null;
+        }
+
+        @Override
+        public GameState set(int i, GameState gameState) {
+            return null;
+        }
+
+        @Override
+        public void add(int i, GameState gameState) {
+
+        }
+
+        @Override
+        public GameState remove(int i) {
+            return null;
+        }
+
+        @Override
+        public int indexOf(@Nullable Object o) {
+            return 0;
+        }
+
+        @Override
+        public int lastIndexOf(@Nullable Object o) {
+            return 0;
+        }
+
+        @NonNull
+        @Override
+        public ListIterator<GameState> listIterator() {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public ListIterator<GameState> listIterator(int i) {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public List<GameState> subList(int i, int i1) {
+            return null;
+        }
+    };
+
+    private List<GameState> ranking = new List<GameState>() {
+        @Override
+        public int size() {
+            return 0;
+        }
+
+        @Override
+        public boolean isEmpty() {
+            return false;
+        }
+
+        @Override
+        public boolean contains(@Nullable Object o) {
+            return false;
+        }
+
+        @NonNull
+        @Override
+        public Iterator<GameState> iterator() {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public Object[] toArray() {
+            return new Object[0];
+        }
+
+        @NonNull
+        @Override
+        public <T> T[] toArray(@NonNull T[] ts) {
+            return null;
+        }
+
+        @Override
+        public boolean add(GameState gameState) {
+            return false;
+        }
+
+        @Override
+        public boolean remove(@Nullable Object o) {
+            return false;
+        }
+
+        @Override
+        public boolean containsAll(@NonNull Collection<?> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(@NonNull Collection<? extends GameState> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(int i, @NonNull Collection<? extends GameState> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean removeAll(@NonNull Collection<?> collection) {
+            return false;
+        }
+
+        @Override
+        public boolean retainAll(@NonNull Collection<?> collection) {
+            return false;
+        }
+
+        @Override
+        public void clear() {
+
+        }
+
+        @Override
+        public GameState get(int i) {
+            return null;
+        }
+
+        @Override
+        public GameState set(int i, GameState gameState) {
+            return null;
+        }
+
+        @Override
+        public void add(int i, GameState gameState) {
+
+        }
+
+        @Override
+        public GameState remove(int i) {
+            return null;
+        }
+
+        @Override
+        public int indexOf(@Nullable Object o) {
+            return 0;
+        }
+
+        @Override
+        public int lastIndexOf(@Nullable Object o) {
+            return 0;
+        }
+
+        @NonNull
+        @Override
+        public ListIterator<GameState> listIterator() {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public ListIterator<GameState> listIterator(int i) {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public List<GameState> subList(int i, int i1) {
+            return null;
+        }
+    };
+        public List<GameState> getRanking() { return ranking;}
+
+    private int numberScores;
+        public int getNumberScores() {return numberScores;}
+        public int numberScoresProperty() {return numberScores;}
+        public void setNumberScores(int numberScores) {this.numberScores = numberScores;}
 
     /**
      * Set le score de base au lancement de la Partie

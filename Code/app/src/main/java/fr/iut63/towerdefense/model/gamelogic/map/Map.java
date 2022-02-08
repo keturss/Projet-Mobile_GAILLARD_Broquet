@@ -1,8 +1,9 @@
-package model.gamelogic.map;
+package fr.iut63.towerdefense.model.gamelogic.map;
 
-import model.Coordinate;
 
 import java.util.ArrayList;
+
+import fr.iut63.towerdefense.model.Coordinate;
 
 /**
  * carte

@@ -1,8 +1,7 @@
-package model.characters.monster;
+package fr.iut63.towerdefense.model.characters.monster;
 
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-import model.characters.Character;
+
+import fr.iut63.towerdefense.model.characters.Character;
 
 /**
  * Définit un Monster à partir d'un Character
@@ -12,10 +11,10 @@ public class Monster extends Character {
     /**
      * Variable qui définit si le Monstre est visible ou non
      */
-    private BooleanProperty visible = new SimpleBooleanProperty();
-        public boolean isVisible() {return visible.get();}
-        public BooleanProperty visibleProperty() {return visible;}
-        public void setVisible(boolean visible) {this.visible.set(visible);}
+    private boolean visible = new Boolean(true);
+        public boolean isVisible() {return visible;}
+        public boolean visibleProperty() {return visible;}
+        public void setVisible(boolean visible) {this.visible = visible;}
 
     /**
      * Constructeur de Monstre

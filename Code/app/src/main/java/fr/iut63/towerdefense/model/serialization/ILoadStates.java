@@ -1,6 +1,6 @@
-package model.serialization;
+package fr.iut63.towerdefense.model.serialization;
 
-import model.ScoreRanking;
+import fr.iut63.towerdefense.model.ScoreRanking;
 
 public interface ILoadStates {
 

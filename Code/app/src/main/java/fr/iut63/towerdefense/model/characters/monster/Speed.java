@@ -1,4 +1,4 @@
-package model.characters.monster;
+package fr.iut63.towerdefense.model.characters.monster;
 
 /**
  * Monstre rapide

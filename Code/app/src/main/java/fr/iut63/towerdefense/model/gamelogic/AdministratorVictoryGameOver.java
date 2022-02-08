@@ -1,7 +1,8 @@
-package model.gamelogic;
+package fr.iut63.towerdefense.model.gamelogic;
 
-import model.gamelogic.action.ILevel;
-import model.gameloop.Loop;
+
+import fr.iut63.towerdefense.model.gamelogic.action.ILevel;
+import fr.iut63.towerdefense.model.gameloop.Loop;
 
 /**
  * Classe permettant de vérifier la victoire ou la partie perdu
@@ -22,8 +23,8 @@ public class AdministratorVictoryGameOver {
      * Vérifie si l'état de la partie est une victoire
      */
     public void verifyVictory() {
-        if(enemyFile instanceof AdministratorLevel administratorLevel) {
-            if (!administratorLevel.getLevelFile().hasNextLine() && game.getCharactersAlive().isEmpty() && loop.isRunning()) {
+        if(enemyFile instanceof AdministratorLevel) {
+            if (!((AdministratorLevel) enemyFile).getLevelFile().hasNextLine() && game.getCharactersAlive().isEmpty() && loop.isRunning()) {
                 loop.setRunning(false);
                 game.setVictory(true);
             }

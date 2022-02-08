@@ -1,9 +1,10 @@
-package model.gamelogic.action.character.monster;
+package fr.iut63.towerdefense.model.gamelogic.action.character.monster;
 
-import model.characters.Character;
-import model.characters.monster.Monster;
-import model.gamelogic.GameState;
-import model.gamelogic.action.IRemover;
+import fr.iut63.towerdefense.model.characters.monster.Monster;
+import fr.iut63.towerdefense.model.characters.Character;
+import fr.iut63.towerdefense.model.gamelogic.GameState;
+import fr.iut63.towerdefense.model.gamelogic.action.IRemover;
+
 
 /**
  * Classe pour supprimer des monstres
