@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tower Defense</string>
+    <string name="playButton">Play</string>
+    <string name="title">Awesome Tower Defense</string>
+</resources>
