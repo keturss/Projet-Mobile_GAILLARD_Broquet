@@ -2,4 +2,6 @@
     <string name="app_name">Tower Defense</string>
     <string name="playButton">Play</string>
     <string name="title">Awesome Tower Defense</string>
+    <string name="start">Game Start</string>
+    <string name="button">Game Start</string>
 </resources>
