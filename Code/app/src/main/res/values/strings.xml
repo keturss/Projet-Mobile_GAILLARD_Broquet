@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Tower Defense</string>
-    <string name="playButton">Play</string>
+    <string name="menu_buttonPlay">Play</string>
     <string name="title">Awesome Tower Defense</string>
     <string name="start">Game Start</string>
     <string name="button">Game Start</string>
+    <string name="menu_buttonParam">Parameters</string>
+    <string name="menu_buttonQuit">Quit</string>
+    <string name="param_music">Music On/Off</string>
+    <string name="param_sound">Sound Effects On/Off</string>
+    <string name="param_music_text">Music :</string>
+    <string name="param_soundEffects_text">Sound Effects :</string>
 </resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ToggleButton
+        android:id="@+id/param_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/param_music"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <ToggleButton
+        android:id="@+id/param_soundEffects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/param_sound"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/param_music"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/param_music"
+        app:layout_constraintTop_toBottomOf="@+id/param_music"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <TextView
+        android:id="@+id/param_music_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/param_music_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/param_music"
+        app:layout_constraintEnd_toStartOf="@+id/param_music"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/param_music" />
+
+    <TextView
+        android:id="@+id/param_soundEffects_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/param_soundEffects_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/param_soundEffects"
+        app:layout_constraintEnd_toEndOf="@+id/param_music_text"
+        app:layout_constraintStart_toStartOf="@+id/param_music_text"
+        app:layout_constraintTop_toTopOf="@+id/param_soundEffects" />
+</androidx.constraintlayout.widget.ConstraintLayout>
