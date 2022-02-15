@@ -22,11 +22,14 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.main_menu);
 
 
-        Button buttonQuit = (Button) findViewById(R.id.menu_buttonQuit);
+        Button buttonQuit =findViewById(R.id.menu_buttonQuit);
         buttonQuit.setOnClickListener(this::onClickQuit);
 
-        Button buttonParameters = (Button) findViewById(R.id.menu_buttonParam);
+        Button buttonParameters = findViewById(R.id.menu_buttonParam);
         buttonParameters.setOnClickListener(this::onClickParam);
+
+        Button buttonPlay = findViewById(R.id.menu_buttonPlay);
+        buttonPlay.setOnClickListener(this::onClickPlay);
 
         Log.d("testsLifecycle", "onCreate");
     }
@@ -69,17 +72,27 @@ public class MainMenu extends AppCompatActivity {
      * Quitte l'application
      * @param view Bouton clické
      */
-    public void onClickQuit(View view) {
+    private void onClickQuit(View view) {
         finish();
     }
 
     /**
      * Méthode appelée lors du click sur le bouton paramètres
-     * Envoie sur la vur des paramètres
+     * Envoie sur la vue des paramètres
      * @param view Bouton clické
      */
     private void onClickParam(View view) {
         Intent intent = new Intent(this, ParametersMenu.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Méthode appelée lors du click sur le bouton jouer
+     * Envoie sur la vue du jeu
+     * @param view Bouton clické
+     */
+    private void onClickPlay(View view) {
+        Intent intent = new Intent(this, ActivityGame.class);
         startActivity(intent);
     }
 }

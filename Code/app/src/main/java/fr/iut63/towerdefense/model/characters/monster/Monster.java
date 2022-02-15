@@ -11,9 +11,8 @@ public class Monster extends Character {
     /**
      * Variable qui définit si le Monstre est visible ou non
      */
-    private boolean visible = new Boolean(true);
+    private boolean visible = true;
         public boolean isVisible() {return visible;}
-        public boolean visibleProperty() {return visible;}
         public void setVisible(boolean visible) {this.visible = visible;}
 
     /**

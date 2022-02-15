@@ -10,7 +10,7 @@ import fr.iut63.towerdefense.model.Coordinate;
  */
 public class Map {
 
-    private final String tileset = "/tileset/tile.png";
+    private final String tileset = "tileset";
     private final int resolutionWidth;
     private final int resolutionHeight;
     private final int tileLengthX;

@@ -21,6 +21,11 @@
                     android:parentActivityName=".views.MainMenu">
         </activity>
 
+        <activity android:name=".views.ActivityGame"
+                    android:screenOrientation="landscape">
+
+        </activity>
+
     </application>
 
 </manifest>

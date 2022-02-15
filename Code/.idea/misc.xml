@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../etud/vigaillard2/Projets2A/jeu-android/Code/app/src/main/res/layout-land/activity_game.xml" value="0.30070546737213405" />
+        <entry key="../../../../../etud/vigaillard2/Projets2A/jeu-android/Code/app/src/main/res/layout-land/main_menu.xml" value="0.30070546737213405" />
+        <entry key="../../../../../etud/vigaillard2/Projets2A/jeu-android/Code/app/src/main/res/layout/activity_game.xml" value="0.19739583333333333" />
         <entry key="../../../../../etud/vigaillard2/Projets2A/jeu-android/Code/app/src/main/res/layout/main_menu.xml" value="0.21467391304347827" />
+        <entry key="../../../../../etud/vigaillard2/Projets2A/jeu-android/Code/app/src/main/res/layout/parameters_menu.xml" value="0.2265625" />
         <entry key="../../../../../etud/vigaillard2/Projets2A/jeu-android/Code/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.27760416666666665" />
         <entry key="../../../../../etud/vigaillard2/Projets2A/jeu-android/Code/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.27760416666666665" />
       </map>
