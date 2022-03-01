@@ -12,7 +12,7 @@ public class GenerationMap extends Map{
      */
     public GenerationMap(int mapWidth, int mapHeight) {
         super(mapWidth, mapHeight);
-       setMap(generateMapArray());
+        setMap(generateMapArray());
     }
 
     /**
