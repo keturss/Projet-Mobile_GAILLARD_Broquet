@@ -1,9 +1,7 @@
 package fr.iut63.towerdefense.views.map;
 
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.widget.ImageView;
 
 import java.io.IOException;
@@ -16,13 +14,21 @@ import fr.iut63.towerdefense.views.ActivityGame;
 
 public class DrawMap {
 
-    private final int TILE_SIZE = 32;
-    private final int NB_TILES = 7;
+    private final int TILE_SIZE = 64;
+
+    private final int width;
+    private final int height;
+
     private final ActivityGame activityGame;
     private final List<Bitmap> tiles;
 
-    public DrawMap(ActivityGame context) {
+
+
+    public DrawMap(ActivityGame context, int width, int height) {
         this.activityGame = context;
+        this.width = width;
+        this.height = height;
+
         this.tiles = loadTileSet();
     }
 
@@ -31,8 +37,9 @@ public class DrawMap {
 
         try {
             for (String path : activityGame.getAssets().list("tiles/")) {
-                InputStream tileIS = activityGame.getAssets().open(path);
-                tiles.add(BitmapFactory.decodeStream(tileIS));
+                InputStream tileIS = activityGame.getAssets().open("tiles/"+path);
+                Bitmap test = BitmapFactory.decodeStream(tileIS);
+                tiles.add(test);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -52,6 +59,8 @@ public class DrawMap {
 
                 tileIMG.setX(j * TILE_SIZE);
                 tileIMG.setY(i * TILE_SIZE);
+
+                System.out.println(tileIMG.getImageMatrix());
 
                 activityGame.getConstraintLayout().addView(tileIMG);
             }
