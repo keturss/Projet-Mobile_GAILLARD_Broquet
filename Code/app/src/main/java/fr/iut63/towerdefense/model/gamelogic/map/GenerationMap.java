@@ -7,8 +7,8 @@ public class GenerationMap extends Map{
 
     /**
      * Génère une map par tableau
-     * @param mapWidth  int Largeur du Tableau
-     * @param mapHeight int Longueur du Tableau
+     * @param mapWidth  int Largeur de la Fenetre
+     * @param mapHeight int Longueur de la Fenetre
      */
     public GenerationMap(int mapWidth, int mapHeight) {
         super(mapWidth, mapHeight);

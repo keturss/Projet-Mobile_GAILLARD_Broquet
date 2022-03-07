@@ -13,8 +13,8 @@ public class Map {
     private final String tileset = "tileset";
     private final int resolutionWidth;
     private final int resolutionHeight;
-    private final int tileLengthX;
-    private final int tileLengthY;
+    private int tileLengthX;
+    private int tileLengthY;
     private final int offsetX;
     private final int offsetY;
     private final boolean offsetXFlag;
@@ -23,15 +23,12 @@ public class Map {
 
     /**
      * Creation d'une Map a partir d'un int[][]
-     * @param mapWidth  int Largeur du Tableau
-     * @param mapHeight int Longueur du Tableau
+     * @param mapWidth  int Largeur de la Fenetre
+     * @param mapHeight int Longueur de la Fenetre
      */
     public Map(int mapWidth , int mapHeight) {
         resolutionWidth = mapWidth;
         resolutionHeight = mapHeight;
-
-        tileLengthX = (int) Math.ceil(mapWidth / 64d);
-        tileLengthY = (int) Math.ceil(mapHeight / 64d);
 
         offsetX = tileLengthX * 64 - resolutionWidth;
         offsetY = tileLengthY * 64 - resolutionHeight;
@@ -58,6 +55,9 @@ public class Map {
     public int getTileLengthY() {
         return tileLengthY;
     }
+
+    public void setTileLengthX(int x){ this.tileLengthX = x;}
+    public void setTileLengthY(int y){ this.tileLengthY = y;}
 
     public int getOffsetY() {
         return offsetY;

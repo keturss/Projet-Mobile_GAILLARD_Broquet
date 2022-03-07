@@ -13,6 +13,11 @@ import java.util.Objects;
  */
 public class ImportMap extends Map{
 
+    /**
+     *
+     * @param mapWidth  int Largeur de la Fenetre
+     * @param mapHeight int Longueur de la Fenetre
+     */
     public ImportMap(int mapWidth, int mapHeight) {
         super(mapWidth, mapHeight);
         setMap(loadMap());
