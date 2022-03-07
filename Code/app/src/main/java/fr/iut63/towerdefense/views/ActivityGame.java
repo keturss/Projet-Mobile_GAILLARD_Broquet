@@ -32,12 +32,11 @@ public class ActivityGame extends AppCompatActivity {
         final int height = displayMetrics.heightPixels;
         final int width = displayMetrics.widthPixels;
 
-        Map map = new GenerationMap(width,height);
+        Map map = new GenerationMap(width, height);
 
         constraintLayout = findViewById(R.id.gamePart);
 
         DrawMap drawMap = new DrawMap(this, width, height, map);
-
         drawMap.drawMap();
 
     }

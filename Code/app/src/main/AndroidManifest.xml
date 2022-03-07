@@ -23,7 +23,6 @@
 
         <activity android:name=".views.ActivityGame"
                     android:screenOrientation="landscape">
-
         </activity>
 
     </application>

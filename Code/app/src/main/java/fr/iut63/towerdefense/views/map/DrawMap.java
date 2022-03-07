@@ -69,11 +69,6 @@ public class DrawMap {
                 tileIMG.setX(j * TILE_WIDTH);
                 tileIMG.setY(i * TILE_HEIGHT);
 
-                //Log.d("test_img", "imageview null?: " + (tileIMG.getLayoutParams() == null));
-
-                //tileIMG.getLayoutParams().width = activityGame.getConstraintLayout().getWidth() / width * TILE_SIZE;
-                //tileIMG.getLayoutParams().height = activityGame.getConstraintLayout().getHeight() / height * TILE_SIZE;
-
                 activityGame.getConstraintLayout().addView(tileIMG);
             }
         }
