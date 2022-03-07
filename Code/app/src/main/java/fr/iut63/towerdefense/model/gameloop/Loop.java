@@ -2,10 +2,12 @@ package fr.iut63.towerdefense.model.gameloop;
 
 import static java.lang.Thread.sleep;
 
+import java.util.logging.Handler;
+
 /**
  * Boucle de jeu
  */
-public class Loop extends Observable implements Runnable {
+public class Loop extends LoopListener implements Runnable {
     private static final long DEFAULT_MILLIS = 50;
     private long millis = 50;
     private int timer = 0;
@@ -44,7 +46,12 @@ public class Loop extends Observable implements Runnable {
         }
     }
 
+    /**
+     * TODO corriger loop Game and search about Handler
+     * @param timer
+     */
     private void beep(int timer) {
-        //Platform.runLater(() -> notify(timer));
+        //notify(timer);
+        //Handler().
     }
 }

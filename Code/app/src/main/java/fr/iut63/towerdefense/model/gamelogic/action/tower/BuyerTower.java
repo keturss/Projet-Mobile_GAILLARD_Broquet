@@ -31,15 +31,15 @@ public class BuyerTower implements IBuyer {
      */
     @Override
     public boolean buy(double xCords, double yCords) {
-        int xTile = (int) (xCords / 64);
-        int yTile = (int) (yCords / 64);
+        int xTile = (int) (xCords / gameMap.getTileLengthX());
+        int yTile = (int) (yCords / gameMap.getTileLengthY());
 
         if (gameMap.nodeOpen(xTile, yTile)) {
             Tower tower = new ClassicTower(xTile, yTile);
             if (game.getCoins() >= Tower.getDefaultSellCost()) {
                 game.addTower(tower);
                 game.setCoins(game.getCoins() - Tower.getDefaultSellCost());
-                gameMap.setMapNode(((int) (xCords / 64)), ((int) (yCords / 64)), 7);
+                gameMap.setMapNode(xTile, yTile, 7);
                 return true;
             }
         }

@@ -25,8 +25,6 @@ public class ActivityGame extends AppCompatActivity {
     private GameManager gameManager;
     DrawMap drawMap;
 
-    private boolean constructTowers = false;
-
     private int height;
     private int width;
 
@@ -47,8 +45,8 @@ public class ActivityGame extends AppCompatActivity {
         constraintLayout = findViewById(R.id.gamePart);
 
         drawMap = new DrawMap(this, gameManager.getGameMap());
+        gameManager.getLoop().start();
         drawMap.drawMap();
-
     }
 
 
@@ -61,14 +59,15 @@ public class ActivityGame extends AppCompatActivity {
 
         Log.d("CoordX", String.valueOf(x/gameManager.getGameMap().getTileLengthX()));
         Log.d("CoordY", String.valueOf(y/gameManager.getGameMap().getTileLengthY()));
-        Log.d("Type", String.valueOf(gameManager.getGameMap().nodeOpen((int)x/gameManager.getGameMap().getTileLengthY(),(int)y/gameManager.getGameMap().getTileLengthX())));
+        Log.d("Loop",String.valueOf(gameManager.getLoop().isRunning()));
 
-        if (constructTowers && gameManager.getLoop().isRunning()) {
+        if (gameManager.getLoop().isRunning()) {
             IBuyer buyer = new BuyerTower(gameManager.getGame(), gameManager.getGameMap());
-            if(buyer.buy(e.getX(), e.getY())){
+            boolean test = buyer.buy(e.getX(), e.getY());
+            Log.d("Construct", String.valueOf(test));
+            if(test){
                 drawMap.drawMap();
             }
-            constructTowers = false;
         }
 
 

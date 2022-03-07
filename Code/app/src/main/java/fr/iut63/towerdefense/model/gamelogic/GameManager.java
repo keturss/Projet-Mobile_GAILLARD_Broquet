@@ -10,14 +10,14 @@ import fr.iut63.towerdefense.model.gamelogic.action.character.SpawnerCharacter;
 import fr.iut63.towerdefense.model.gamelogic.action.states.Updater;
 import fr.iut63.towerdefense.model.gamelogic.action.tower.AttackerTower;
 import fr.iut63.towerdefense.model.gamelogic.map.Map;
-import fr.iut63.towerdefense.model.gameloop.IObserver;
+import fr.iut63.towerdefense.model.gameloop.ILoopListener;
 import fr.iut63.towerdefense.model.gameloop.Loop;
 import fr.iut63.towerdefense.model.characters.Character;
 
 /**
  * Classe qui gère la partie
  */
-public class GameManager implements IObserver {
+public class GameManager implements ILoopListener {
 
     private Map gameMap;
     private GameState game;

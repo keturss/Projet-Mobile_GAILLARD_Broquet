@@ -23,7 +23,7 @@ public class DisplacerCharacters implements IDisplacer {
     public DisplacerCharacters(GameState game) {this.game = game;}
 
     /**
-     * Modifie la position de tous les Character dans Observable List -> GameState
+     * Modifie la position de tous les Character dans LoopListenner List -> GameState
      * @return
      */
     @Override

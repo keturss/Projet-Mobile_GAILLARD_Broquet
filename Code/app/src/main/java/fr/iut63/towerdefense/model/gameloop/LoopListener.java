@@ -3,16 +3,16 @@ package fr.iut63.towerdefense.model.gameloop;
 import java.util.LinkedList;
 
 /**
- * Classe Observable
+ * Classe LoopListener
  */
-public abstract class Observable {
-    private LinkedList<IObserver> observatory = new LinkedList<>();
+public abstract class LoopListener {
+    private LinkedList<ILoopListener> observatory = new LinkedList<>();
 
-    public void subscribe(IObserver listener){
+    public void subscribe(ILoopListener listener){
         observatory.add(listener);
     }
 
-    public void unsubscribe(IObserver listener){
+    public void unsubscribe(ILoopListener listener){
         observatory.remove(listener);
     }
 
@@ -21,7 +21,7 @@ public abstract class Observable {
      * @param timer
      */
     protected void notify(int timer){
-        for(IObserver observer : observatory){
+        for(ILoopListener observer : observatory){
             observer.update(timer);
         }
     }
