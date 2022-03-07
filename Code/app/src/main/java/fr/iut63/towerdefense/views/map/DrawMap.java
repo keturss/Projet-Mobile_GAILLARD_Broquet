@@ -14,20 +14,32 @@ import fr.iut63.towerdefense.views.ActivityGame;
 
 public class DrawMap {
 
-    private final int TILE_SIZE = 64;
+    private final int TILE_HEIGHT ;
+    private final int TILE_WIDTH;
+    private final int screenWidth;
+    private final int screenHeight;
 
-    private final int width;
-    private final int height;
+    private Map map;
+    private int mapH;
+    private int mapW;
+    private int[][] tabMap;
 
     private final ActivityGame activityGame;
     private final List<Bitmap> tiles;
 
 
 
-    public DrawMap(ActivityGame context, int width, int height) {
+    public DrawMap(ActivityGame context, int sWidth, int sHeight, Map map) {
         this.activityGame = context;
-        this.width = width;
-        this.height = height;
+        this.screenWidth = sWidth;
+        this.screenHeight = sHeight;
+        this.map = map;
+        tabMap = map.getMap();
+        mapH = tabMap.length;
+        mapW = tabMap[0].length;
+
+        TILE_WIDTH = screenWidth / mapW ;
+        TILE_HEIGHT = screenHeight / mapH;
 
         this.tiles = loadTileSet();
     }
@@ -38,8 +50,8 @@ public class DrawMap {
         try {
             for (String path : activityGame.getAssets().list("tiles/")) {
                 InputStream tileIS = activityGame.getAssets().open("tiles/"+path);
-                Bitmap test = BitmapFactory.decodeStream(tileIS);
-                tiles.add(test);
+                Bitmap bitmap = BitmapFactory.decodeStream(tileIS);
+                tiles.add(Bitmap.createScaledBitmap(bitmap, TILE_WIDTH, TILE_HEIGHT, true));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,20 +59,20 @@ public class DrawMap {
         return tiles;
     }
 
-    public void drawMap(Map map) {
-        int[][] tabMap = map.getMap();
-        int height = tabMap.length;
-        int width = tabMap[0].length;
-
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
+    public void drawMap() {
+        for (int i = 0; i < mapH; i++) {
+            for (int j = 0; j < mapW; j++) {
                 ImageView tileIMG = new ImageView(activityGame);
                 tileIMG.setImageBitmap(tiles.get(tabMap[i][j]));
 
-                tileIMG.setX(j * TILE_SIZE);
-                tileIMG.setY(i * TILE_SIZE);
 
-                System.out.println(tileIMG.getImageMatrix());
+                tileIMG.setX(j * TILE_WIDTH);
+                tileIMG.setY(i * TILE_HEIGHT);
+
+                //Log.d("test_img", "imageview null?: " + (tileIMG.getLayoutParams() == null));
+
+                //tileIMG.getLayoutParams().width = activityGame.getConstraintLayout().getWidth() / width * TILE_SIZE;
+                //tileIMG.getLayoutParams().height = activityGame.getConstraintLayout().getHeight() / height * TILE_SIZE;
 
                 activityGame.getConstraintLayout().addView(tileIMG);
             }

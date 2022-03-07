@@ -36,9 +36,9 @@ public class ActivityGame extends AppCompatActivity {
 
         constraintLayout = findViewById(R.id.gamePart);
 
-        DrawMap drawMap = new DrawMap(this,width,height);
+        DrawMap drawMap = new DrawMap(this, width, height, map);
 
-        drawMap.drawMap(map);
+        drawMap.drawMap();
 
     }
 
