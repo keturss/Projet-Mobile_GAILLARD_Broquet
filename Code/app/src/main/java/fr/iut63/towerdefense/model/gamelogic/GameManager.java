@@ -1,6 +1,8 @@
 package fr.iut63.towerdefense.model.gamelogic;
 
 
+import android.util.Log;
+
 import fr.iut63.towerdefense.model.gamelogic.action.IAttacker;
 import fr.iut63.towerdefense.model.gamelogic.action.IDisplacer;
 import fr.iut63.towerdefense.model.gamelogic.action.ILevel;
@@ -72,13 +74,13 @@ public class GameManager implements ILoopListener {
         if (loop.isRunning()) {
             Updater.updateTimerSeconds(timer, loop.getDefaultMillis(), game);
 
-            administratorVictoryGameOver.verifyVictory();
+            //administratorVictoryGameOver.verifyVictory();
 
-            spawner.spawn(timer);
+            //spawner.spawn(timer);
 
-            administratorVictoryGameOver.verifyGameOver(!displacer.updateLocations());
+            //administratorVictoryGameOver.verifyGameOver(!displacer.updateLocations());
 
-            attacker.attack();
+            //attacker.attack();
         }
     }
 }

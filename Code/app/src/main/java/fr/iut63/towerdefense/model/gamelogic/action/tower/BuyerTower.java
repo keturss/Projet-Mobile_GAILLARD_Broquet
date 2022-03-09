@@ -1,6 +1,8 @@
 package fr.iut63.towerdefense.model.gamelogic.action.tower;
 
 
+import android.util.Log;
+
 import fr.iut63.towerdefense.model.characters.tower.ClassicTower;
 import fr.iut63.towerdefense.model.characters.tower.Tower;
 import fr.iut63.towerdefense.model.gamelogic.GameState;
@@ -31,8 +33,9 @@ public class BuyerTower implements IBuyer {
      */
     @Override
     public boolean buy(double xCords, double yCords) {
-        int xTile = (int) (xCords / gameMap.getTileLengthX());
-        int yTile = (int) (yCords / gameMap.getTileLengthY());
+        int xTile =  (int) Math.floor(xCords / gameMap.getTileLengthX());
+        int yTile = (int) Math.floor((yCords-87) / gameMap.getTileLengthY());          //-87 pour status bar
+
 
         if (gameMap.nodeOpen(xTile, yTile)) {
             Tower tower = new ClassicTower(xTile, yTile);

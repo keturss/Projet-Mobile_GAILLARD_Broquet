@@ -30,11 +30,10 @@ public class Map {
         resolutionWidth = mapWidth;
         resolutionHeight = mapHeight;
 
-        offsetX = tileLengthX * 64 - resolutionWidth;
-        offsetY = tileLengthY * 64 - resolutionHeight;
+        offsetX = tileLengthX * tileLengthX - resolutionWidth;
+        offsetY = tileLengthY * tileLengthY - resolutionHeight;
 
         offsetXFlag = offsetX != 0;
-
         offsetYFlag = offsetY != 0;
     }
 

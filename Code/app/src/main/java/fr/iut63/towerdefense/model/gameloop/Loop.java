@@ -22,6 +22,7 @@ public class Loop extends LoopListener implements Runnable {
     public void setRunning(boolean run){running = run;}
 
 
+
     /**
      * Démarrage de la boucle
      */
@@ -46,12 +47,7 @@ public class Loop extends LoopListener implements Runnable {
         }
     }
 
-    /**
-     * TODO corriger loop Game and search about Handler
-     * @param timer
-     */
     private void beep(int timer) {
-        //notify(timer);
-        //Handler().
+        notify(timer);
     }
 }

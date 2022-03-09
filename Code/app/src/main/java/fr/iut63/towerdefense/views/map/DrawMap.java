@@ -2,6 +2,7 @@ package fr.iut63.towerdefense.views.map;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.widget.ImageView;
 
 import java.io.IOException;
@@ -33,8 +34,8 @@ public class DrawMap {
         mapH = map.getMap().length;
         mapW = map.getMap()[0].length;
 
-        map.setTileLengthX(screenWidth / mapW);
-        map.setTileLengthY(screenHeight / mapH);
+        map.setTileLengthX(screenWidth / (mapW));
+        map.setTileLengthY(screenHeight / (mapH));
 
         this.tiles = loadTileSet();
     }
@@ -54,7 +55,7 @@ public class DrawMap {
         return tiles;
     }
 
-    public void drawMap() {
+    public void draw() {
         for (int i = 0; i < mapH; i++) {
             for (int j = 0; j < mapW; j++) {
                 ImageView tileIMG = new ImageView(activityGame);
