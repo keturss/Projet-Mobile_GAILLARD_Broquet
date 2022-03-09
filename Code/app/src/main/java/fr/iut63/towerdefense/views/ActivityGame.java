@@ -45,7 +45,7 @@ public class ActivityGame extends AppCompatActivity {
         constraintLayout = findViewById(R.id.gamePart);
 
         drawMap = new DrawMap(this, gameManager.getGameMap());
-        gameManager.getLoop().start();
+        //gameManager.getLoop().start();
         drawMap.drawMap();
     }
 
