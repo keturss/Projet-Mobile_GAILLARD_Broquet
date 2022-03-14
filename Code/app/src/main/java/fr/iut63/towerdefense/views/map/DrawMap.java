@@ -44,7 +44,8 @@ public class DrawMap {
         ArrayList<Bitmap> tiles = new ArrayList<>();
 
         try {
-            for (String path : activityGame.getAssets().list("tiles/")) {
+            String[] paths = activityGame.getAssets().list("tiles");
+            for (String path : paths) {
                 InputStream tileIS = activityGame.getAssets().open("tiles/"+path);
                 Bitmap bitmap = BitmapFactory.decodeStream(tileIS);
                 tiles.add(Bitmap.createScaledBitmap(bitmap, map.getTileLengthX(), map.getTileLengthY(), true));
