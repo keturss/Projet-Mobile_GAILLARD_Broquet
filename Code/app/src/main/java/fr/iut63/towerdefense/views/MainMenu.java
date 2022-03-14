@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import fr.iut63.towerdefense.R;
@@ -15,6 +16,8 @@ import fr.iut63.towerdefense.model.gamelogic.map.ImportMap;
 import fr.iut63.towerdefense.model.gamelogic.map.Map;
 
 public class MainMenu extends AppCompatActivity {
+
+    private AlertDialog dialogQuit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,40 +34,45 @@ public class MainMenu extends AppCompatActivity {
         Button buttonPlay = findViewById(R.id.menu_buttonPlay);
         buttonPlay.setOnClickListener(this::onClickPlay);
 
-        Log.d("testsLifecycle", "onCreate");
+        AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
+        builderGiveUpDialog.setTitle(R.string.menu_buttonQuit)
+                .setMessage(R.string.menu_quit_ask)
+                .setPositiveButton(R.string.ok, (dialog, id) -> finish())
+                .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
+
+        dialogQuit = builderGiveUpDialog.create();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
-
-        Log.d("testsLifecycle", "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        Log.d("testsLifecycle", "onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("testsLifecycle", "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("testsLifecycle", "onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("testsLifecycle", "onDestroy");
+    }
+
+    /**
+     * Lance le dialogue de confirmation de fermeture de l'appli
+     */
+    public void quitGame(){
+        dialogQuit.show();
     }
 
     /**
@@ -73,7 +81,7 @@ public class MainMenu extends AppCompatActivity {
      * @param view Bouton clické
      */
     private void onClickQuit(View view) {
-        finish();
+        quitGame();
     }
 
     /**

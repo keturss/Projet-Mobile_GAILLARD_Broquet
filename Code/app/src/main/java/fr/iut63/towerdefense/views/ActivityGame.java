@@ -2,10 +2,11 @@ package fr.iut63.towerdefense.views;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
+import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -14,8 +15,6 @@ import fr.iut63.towerdefense.model.gamelogic.GameManager;
 import fr.iut63.towerdefense.model.gamelogic.action.IBuyer;
 import fr.iut63.towerdefense.model.gamelogic.action.tower.BuyerTower;
 import fr.iut63.towerdefense.model.gamelogic.map.GenerationMap;
-import fr.iut63.towerdefense.model.gamelogic.map.ImportMap;
-import fr.iut63.towerdefense.model.gamelogic.map.Map;
 import fr.iut63.towerdefense.views.map.DrawMap;
 
 public class ActivityGame extends AppCompatActivity {
@@ -23,7 +22,9 @@ public class ActivityGame extends AppCompatActivity {
 
     private ConstraintLayout constraintLayout;
     private GameManager gameManager;
-    DrawMap drawMap;
+    private DrawMap drawMap;
+
+    private AlertDialog dialog;
 
     private int height;
     private int width;
@@ -47,9 +48,22 @@ public class ActivityGame extends AppCompatActivity {
         drawMap = new DrawMap(this, gameManager.getGameMap());
         gameManager.start();
         drawMap.draw();
+
+        AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
+        builderGiveUpDialog.setTitle(R.string.give_up)
+                            .setMessage(R.string.give_up_ask)
+                            .setCancelable(false)
+                            .setPositiveButton(R.string.ok, (dialog, id) -> super.onBackPressed())
+                            .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
+
+        dialog = builderGiveUpDialog.create();
     }
 
 
+    @Override
+    public void onBackPressed() {
+        dialog.show();
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent e) {

@@ -14,4 +14,8 @@
     <string name="param_soundEffects_text">Sound Effects :</string>
     <!-- Game Screen -->
     <string name="give_up">Give Up</string>
+    <string name="ok">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="give_up_ask">Do you really want to give up?</string>
+    <string name="menu_quit_ask">Are you sure you want to quit?</string>
 </resources>
