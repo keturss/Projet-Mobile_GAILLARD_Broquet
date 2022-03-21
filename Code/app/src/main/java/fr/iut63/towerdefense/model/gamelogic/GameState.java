@@ -266,37 +266,29 @@ public class GameState implements Comparable<GameState>{
     };
     private boolean speed = false;
     private boolean removeCharacter = false;
-    private String pseudo = new String();
+    private String pseudo = "";
         public String getPseudo() {return pseudo;}
-        public String pseudoProperty() {return pseudo;}
         public void setPseudo(String pseudo) {this.pseudo = pseudo;}
     private int timeSeconds ;
         public int getTimeSeconds() {return timeSeconds;}
-        public int timeSecondsProperty() {return timeSeconds;}
         public void setTimeSeconds(int timeSeconds) {this.timeSeconds = timeSeconds;}
     private Boolean gameOver;
         public boolean isGameOver() {return gameOver;}
-        public Boolean gameOverProperty() {return gameOver;}
         public void setGameOver(boolean gameOver) {this.gameOver = gameOver;}
-    private Boolean victory = new Boolean(false);
+    private Boolean victory = false;
         public boolean isVictory() {return victory;}
-        public Boolean victoryProperty() {return victory;}
         public void setVictory(boolean victory) {this.victory =victory;}
     private int level ;
         public int getLevel() {return level;}
-        public int levelProperty() {return level;}
         public void setLevel(int level) {this.level = level;}
     private int lives;
         public int getLives(){return lives;}
-        public int livesProperty() {return lives;}
         public void setLives(int lives){this.lives = lives;}
     private int coins ;
         public int getCoins() {return coins;}
-        public int coinsProperty() {return coins;}
         public void setCoins(int coins) {this.coins = coins;}
     private int score ;
         public int getScore() {return score;}
-        public int scoreProperty() {return score;}
         public void setScore(int score) {this.score = score;}
 
     /**

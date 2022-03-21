@@ -3,7 +3,7 @@ package fr.iut63.towerdefense.views;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
-import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -20,7 +20,7 @@ import fr.iut63.towerdefense.views.map.DrawMap;
 public class ActivityGame extends AppCompatActivity {
 
 
-    private ConstraintLayout constraintLayout;
+    private ConstraintLayout gamePart;
     private GameManager gameManager;
     private DrawMap drawMap;
 
@@ -43,7 +43,7 @@ public class ActivityGame extends AppCompatActivity {
 
         gameManager = new GameManager("keturss", new GenerationMap(width, height));
 
-        constraintLayout = findViewById(R.id.gamePart);
+        gamePart = findViewById(R.id.gamePart);
 
         drawMap = new DrawMap(this, gameManager.getGameMap());
         gameManager.start();
@@ -57,6 +57,8 @@ public class ActivityGame extends AppCompatActivity {
                             .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
 
         dialog = builderGiveUpDialog.create();
+
+        //((TextView) findViewById(R.id.life_number)).setText(gameManager.getGame().getLives());
     }
 
 
@@ -67,7 +69,6 @@ public class ActivityGame extends AppCompatActivity {
 
     @Override
     public boolean onTouchEvent(MotionEvent e) {
-
         float x = e.getX();
         float y = e.getY();
 
@@ -81,8 +82,8 @@ public class ActivityGame extends AppCompatActivity {
     }
 
 
-    public ConstraintLayout getConstraintLayout() {
-        return constraintLayout;
+    public ConstraintLayout getGamePart() {
+        return gamePart;
     }
 
     @Override

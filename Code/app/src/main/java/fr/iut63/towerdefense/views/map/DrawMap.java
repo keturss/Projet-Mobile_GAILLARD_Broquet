@@ -2,7 +2,6 @@ package fr.iut63.towerdefense.views.map;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.widget.ImageView;
 
 import java.io.IOException;
@@ -65,7 +64,7 @@ public class DrawMap {
                 tileIMG.setX(j * map.getTileLengthX());
                 tileIMG.setY(i * map.getTileLengthY());
 
-                activityGame.getConstraintLayout().addView(tileIMG);
+                activityGame.getGamePart().addView(tileIMG);
             }
         }
     }
