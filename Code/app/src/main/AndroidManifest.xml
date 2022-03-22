@@ -10,18 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TowerDefense">
 
-        <activity android:name=".views.MainMenu" android:exported="true" android:screenOrientation="sensor">
+        <activity android:name=".UI.activity.MainMenu" android:exported="true" android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".views.ParametersMenu"
-                    android:parentActivityName=".views.MainMenu">
+        <activity android:name=".UI.activity.ParametersMenu"
+                    android:parentActivityName=".UI.activity.MainMenu" android:screenOrientation="sensor">
         </activity>
 
-        <activity android:name=".views.ActivityGame"
+        <activity android:name=".UI.activity.ScoreActivity"
+            android:parentActivityName=".UI.activity.ScoreActivity" android:screenOrientation="sensor">
+        </activity>
+
+        <activity android:name=".UI.activity.ActivityGame"
                     android:screenOrientation="sensorLandscape">
         </activity>
 

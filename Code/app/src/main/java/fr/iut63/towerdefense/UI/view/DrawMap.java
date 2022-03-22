@@ -1,4 +1,4 @@
-package fr.iut63.towerdefense.views.map;
+package fr.iut63.towerdefense.UI.view;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.iut63.towerdefense.model.gamelogic.map.Map;
-import fr.iut63.towerdefense.views.ActivityGame;
+import fr.iut63.towerdefense.UI.activity.ActivityGame;
 
 public class DrawMap {
 

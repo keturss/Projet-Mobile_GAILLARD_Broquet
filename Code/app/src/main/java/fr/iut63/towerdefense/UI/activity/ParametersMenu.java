@@ -1,4 +1,4 @@
-package fr.iut63.towerdefense.views;
+package fr.iut63.towerdefense.UI.activity;
 
 import android.os.Bundle;
 
