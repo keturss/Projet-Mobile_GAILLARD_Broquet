@@ -3,6 +3,7 @@ package fr.iut63.towerdefense.UI.activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -56,8 +57,7 @@ public class ActivityGame extends AppCompatActivity {
                             .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
 
         dialog = builderGiveUpDialog.create();
-
-        //((TextView) findViewById(R.id.life_number)).setText(gameManager.getGame().getLives());
+        ((TextView) findViewById(R.id.life_number)).setText(String.valueOf(gameManager.getGame().getLives()));
     }
 
 
