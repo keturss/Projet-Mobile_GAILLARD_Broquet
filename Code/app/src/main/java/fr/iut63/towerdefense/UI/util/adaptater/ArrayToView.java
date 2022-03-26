@@ -31,10 +31,8 @@ public class ArrayToView extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         GameState scoreCourant = scores.get(position);
-        Log.d("Pseudo",scoreCourant.getPseudo());
-        Log.d("Score", String.valueOf(scoreCourant.getScore()));
         ((ViewHolderScore)holder).getPseudoViewScore().setText(scoreCourant.getPseudo());
-        ((ViewHolderScore)holder).getScoreViewScore().setText(String.valueOf(scoreCourant.getScore()));
+        ((ViewHolderScore)holder).getScoreViewScore().setText(String.valueOf(10));
     }
 
     @Override
