@@ -21,46 +21,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title"
-        android:textColor="#000000"
         android:textSize="40sp"
         android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="0.589" />
 
     <Button
         android:id="@+id/menu_buttonPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_buttonPlay"
-        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_title" />
-
-    <Button
-        android:id="@+id/menu_buttonScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/menu_buttonParam"
-        app:layout_constraintBottom_toBottomOf="@+id/menu_buttonPlay"
-        app:layout_constraintEnd_toStartOf="@+id/menu_buttonPlay"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/menu_buttonPlay" />
+        app:layout_constraintTop_toBottomOf="@+id/menu_title"
+        app:layout_constraintVertical_bias="0.244" />
 
     <Button
         android:id="@+id/menu_buttonQuit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_buttonQuit"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/menu_buttonScore"
+        app:layout_constraintEnd_toEndOf="@+id/menu_buttonParam"
+        app:layout_constraintStart_toStartOf="@+id/menu_buttonParam"
+        app:layout_constraintTop_toTopOf="@+id/menu_buttonScore"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/menu_buttonScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_buttonScore"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/menu_buttonPlay"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/menu_buttonPlay"
+        app:layout_constraintTop_toBottomOf="@+id/menu_buttonPlay"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <Button
+        android:id="@+id/menu_buttonParam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_buttonParam"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/menu_buttonPlay"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toEndOf="@+id/menu_buttonPlay"
-        app:layout_constraintTop_toTopOf="@+id/menu_buttonPlay"/>
+        app:layout_constraintTop_toTopOf="@+id/menu_buttonPlay"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
