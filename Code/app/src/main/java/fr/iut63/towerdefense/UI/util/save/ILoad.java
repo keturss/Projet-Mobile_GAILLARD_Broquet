@@ -1,8 +1,8 @@
 package fr.iut63.towerdefense.UI.util.save;
 
 import java.io.FileInputStream;
+import java.io.Serializable;
 
 public interface ILoad {
-
-    Object load(FileInputStream file);
+    Serializable load(FileInputStream file);
 }

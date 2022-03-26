@@ -8,8 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class FileLoader implements ILoad {
+import fr.iut63.towerdefense.model.gamelogic.GameState;
+
+public class FileLoader implements ILoad{
     @Nullable
     @Override
     public Serializable load(@NonNull FileInputStream file) {

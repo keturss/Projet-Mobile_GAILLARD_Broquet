@@ -33,7 +33,7 @@ public class ScoreActivity extends AppCompatActivity {
 
     private RecyclerView scoresRecyclerView;
     private TextView textViewHUD;
-    ArrayList<GameState> scoresView = new ArrayList<>();
+    private ArrayList<GameState> scoresView = new ArrayList<>();
 
 
     @Override
@@ -47,6 +47,7 @@ public class ScoreActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             Log.d("ERREURLOAD", String.valueOf(e));
         }
+        
         if (scores == null) {
             modele = new Stub();
             scores = (ArrayList<GameState>) modele.load(null);
