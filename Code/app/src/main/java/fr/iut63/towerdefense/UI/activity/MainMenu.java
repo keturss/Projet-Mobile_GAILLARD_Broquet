@@ -1,8 +1,7 @@
-package fr.iut63.towerdefense.views;
+package fr.iut63.towerdefense.UI.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,9 +10,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import fr.iut63.towerdefense.R;
-import fr.iut63.towerdefense.model.gamelogic.GameManager;
-import fr.iut63.towerdefense.model.gamelogic.map.ImportMap;
-import fr.iut63.towerdefense.model.gamelogic.map.Map;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -30,6 +26,9 @@ public class MainMenu extends AppCompatActivity {
 
         Button buttonParameters = findViewById(R.id.menu_buttonParam);
         buttonParameters.setOnClickListener(this::onClickParam);
+
+        Button buttonScores = findViewById(R.id.menu_buttonScore);
+        buttonScores.setOnClickListener(this::onClickScore);
 
         Button buttonPlay = findViewById(R.id.menu_buttonPlay);
         buttonPlay.setOnClickListener(this::onClickPlay);
@@ -101,6 +100,11 @@ public class MainMenu extends AppCompatActivity {
      */
     private void onClickPlay(View view) {
         Intent intent = new Intent(this, ActivityGame.class);
+        startActivity(intent);
+    }
+
+    private void onClickScore(View view) {
+        Intent intent = new Intent(this, ScoreActivity.class);
         startActivity(intent);
     }
 }

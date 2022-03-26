@@ -1,9 +1,8 @@
-package fr.iut63.towerdefense.views;
+package fr.iut63.towerdefense.UI.activity;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -15,7 +14,7 @@ import fr.iut63.towerdefense.model.gamelogic.GameManager;
 import fr.iut63.towerdefense.model.gamelogic.action.IBuyer;
 import fr.iut63.towerdefense.model.gamelogic.action.tower.BuyerTower;
 import fr.iut63.towerdefense.model.gamelogic.map.GenerationMap;
-import fr.iut63.towerdefense.views.map.DrawMap;
+import fr.iut63.towerdefense.UI.view.DrawMap;
 
 public class ActivityGame extends AppCompatActivity {
 
