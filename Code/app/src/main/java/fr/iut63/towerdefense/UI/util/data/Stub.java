@@ -10,7 +10,7 @@ import fr.iut63.towerdefense.model.gamelogic.GameState;
 public class Stub implements ILoad {
 
     @Override
-    public Serializable load(FileInputStream file) {
+    public ArrayList<GameState> load(FileInputStream file) {
         ArrayList<GameState> scores = new ArrayList<>();
         scores.add(new GameState("Matteo"));
         scores.add(new GameState("Victor"));
