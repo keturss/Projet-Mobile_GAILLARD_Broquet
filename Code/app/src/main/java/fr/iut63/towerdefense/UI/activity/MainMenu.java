@@ -20,6 +20,7 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
 
+        popUpWelcome();
 
         Button buttonQuit =findViewById(R.id.menu_buttonQuit);
         buttonQuit.setOnClickListener(this::onClickQuit);
@@ -40,6 +41,19 @@ public class MainMenu extends AppCompatActivity {
                 .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
 
         dialogQuit = builderGiveUpDialog.create();
+    }
+
+    public void popUpWelcome(){
+        PopUpMessage popUpMessage = new PopUpMessage(this);
+        popUpMessage.setTitle("Bienvenue");
+        popUpMessage.setSubTitle("Vous êtes nouveau ??");
+        popUpMessage.getYesButton().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popUpMessage.dismiss();
+            }
+        });
+        popUpMessage.build();
     }
 
     @Override
