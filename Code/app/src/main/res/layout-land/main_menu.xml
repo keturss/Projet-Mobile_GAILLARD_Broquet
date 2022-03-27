@@ -5,16 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nicknameTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_button_left_and_right"
+        android:layout_marginEnd="@dimen/margin_button_left_and_right"
+        android:layout_marginBottom="@dimen/margin_top_and_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Tap to enter a name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <ImageView
         android:id="@+id/menu_logo"
-        android:layout_width="168dp"
-        android:layout_height="163dp"
+        android:layout_width="169dp"
+        android:layout_height="130dp"
+        android:src="@drawable/tower"
         app:layout_constraintBottom_toTopOf="@+id/menu_title"
         app:layout_constraintEnd_toEndOf="@+id/menu_title"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/menu_title"
-        app:layout_constraintVertical_bias="0.391"
-        android:src="@drawable/tower"/>
+        app:layout_constraintStart_toStartOf="@+id/menu_title" />
 
     <TextView
         android:id="@+id/menu_title"

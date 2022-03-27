@@ -1,4 +1,4 @@
-package fr.iut63.towerdefense.UI.activity;
+package fr.iut63.towerdefense.UI.view;
 
 import android.app.Activity;
 import android.app.Dialog;

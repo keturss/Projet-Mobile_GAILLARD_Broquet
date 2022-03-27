@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
 import fr.iut63.towerdefense.R;
+import fr.iut63.towerdefense.UI.view.PopUpMessage;
 
 public class MainMenu extends AppCompatActivity {
 

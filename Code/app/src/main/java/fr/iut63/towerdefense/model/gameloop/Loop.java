@@ -33,6 +33,11 @@ public class Loop extends LoopListener implements Runnable {
         run();
     }
 
+    public void stop() {
+        running = false;
+        run();
+    }
+
     /**
      * Procédure de la boucle avec sa fréquence
      */

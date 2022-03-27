@@ -53,14 +53,16 @@ public class ActivityGame extends AppCompatActivity {
 
         gameManager = new GameManager("keturss", new GenerationMap(width, height));
 
-
+        /*
         gameview = new GameView(this, gameManager, width, height);
+        */
+
+        drawMap = new DrawMap(this, gameManager.getGameMap());
+        gamePart = findViewById(R.id.gamePart);
 
         loop = gameManager.getLoop();
         loop.setView(gameview);
-
-        gamePart = findViewById(R.id.gamePart);
-
+        drawMap.draw();
 
         AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
         builderGiveUpDialog.setTitle(R.string.give_up)
@@ -111,6 +113,7 @@ public class ActivityGame extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        gameManager.getLoop().stop();
     }
 
     public static Intent newIntent(Context context, String nickname){
