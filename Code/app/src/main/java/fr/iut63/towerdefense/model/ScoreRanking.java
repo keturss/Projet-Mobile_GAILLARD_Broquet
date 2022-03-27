@@ -138,7 +138,7 @@ public class ScoreRanking {
         }
     };
 
-    private List<GameState> ranking = new List<GameState>() {
+    private final List<GameState> ranking = new List<GameState>() {
         @Override
         public int size() {
             return 0;

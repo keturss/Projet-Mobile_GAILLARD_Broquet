@@ -19,10 +19,10 @@ import fr.iut63.towerdefense.model.characters.Projectile;
 public abstract class Tower {
     private static final int BUILD_TIME_SECONDS = 2; //Temps de construction
     private static final int DEFAULT_SELL_COST = 25; //Prix de construction
-    private int attackDamage;
-    private int attackRange;
+    private final int attackDamage;
+    private final int attackRange;
 
-    private List<Projectile> projectile = new List<Projectile>() {
+    private final List<Projectile> projectile = new List<Projectile>() {
         @Override
         public int size() {
             return 0;
@@ -145,7 +145,7 @@ public abstract class Tower {
         }
     };
 
-    private Coordinate coordinate;
+    private final Coordinate coordinate;
     private boolean attacker = true;
     private boolean build = false;
 

@@ -17,7 +17,7 @@ import fr.iut63.towerdefense.model.gamelogic.action.states.Updater;
  */
 public class DisplacerCharacters implements IDisplacer {
 
-    private GameState game;
+    private final GameState game;
     private IRemover remover;
 
     public DisplacerCharacters(GameState game) {this.game = game;}

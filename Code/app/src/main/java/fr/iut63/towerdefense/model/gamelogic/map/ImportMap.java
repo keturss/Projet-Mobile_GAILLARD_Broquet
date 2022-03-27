@@ -67,7 +67,7 @@ public class ImportMap extends Map{
             return tableauMap;
 
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return null;
     }

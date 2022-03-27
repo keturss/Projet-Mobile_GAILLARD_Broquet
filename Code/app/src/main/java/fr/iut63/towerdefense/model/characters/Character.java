@@ -10,9 +10,9 @@ import fr.iut63.towerdefense.model.Coordinate;
  */
 public abstract class Character {
     private static ArrayList<Coordinate> path;
-    private Coordinate coordinate;
+    private final Coordinate coordinate;
     private int healthPoints;
-    private int reward;
+    private final int reward;
     private int direction;
     private boolean moveX;
     private boolean dead;

@@ -1,12 +1,14 @@
 package fr.iut63.towerdefense.UI.util.data;
 
 import java.io.FileInputStream;
-import java.io.Serializable;
 import java.util.ArrayList;
 
 import fr.iut63.towerdefense.UI.util.save.ILoad;
 import fr.iut63.towerdefense.model.gamelogic.GameState;
 
+/**
+ * Stub score GameState
+ */
 public class Stub implements ILoad {
 
     @Override

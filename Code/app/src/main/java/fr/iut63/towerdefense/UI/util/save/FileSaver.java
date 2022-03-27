@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+/**
+ * Persitence profonde file save
+ */
 public class FileSaver implements ISave {
 
     @Override

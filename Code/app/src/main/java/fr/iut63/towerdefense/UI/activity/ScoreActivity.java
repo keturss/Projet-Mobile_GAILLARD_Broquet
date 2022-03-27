@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.FileNotFoundException;
@@ -15,7 +14,6 @@ import java.util.ArrayList;
 
 import fr.iut63.towerdefense.R;
 import fr.iut63.towerdefense.UI.fragment.MasterScoreFragment;
-import fr.iut63.towerdefense.UI.util.adaptater.ArrayToView;
 import fr.iut63.towerdefense.UI.util.data.Stub;
 import fr.iut63.towerdefense.UI.util.save.FileLoader;
 import fr.iut63.towerdefense.UI.util.save.FileSaver;
@@ -23,10 +21,13 @@ import fr.iut63.towerdefense.UI.util.save.ILoad;
 import fr.iut63.towerdefense.UI.util.save.ISave;
 import fr.iut63.towerdefense.model.gamelogic.GameState;
 
+/**
+ * Activité Score
+ */
 public class ScoreActivity extends AppCompatActivity {
 
     public static final String PATHToScores = "scores";
-    private ISave save = new FileSaver();
+    private final ISave save = new FileSaver();
     private ILoad loader;
     private Stub modele;
     private ArrayList<GameState> scores = null;
@@ -46,10 +47,10 @@ public class ScoreActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             Log.d("ERREURLOAD", String.valueOf(e));
         }
-        
+
         if (scores == null) {
             modele = new Stub();
-            scores = (ArrayList<GameState>) modele.load(null);
+            scores = modele.load(null);
         }
 
         getSupportFragmentManager().beginTransaction()
@@ -81,6 +82,9 @@ public class ScoreActivity extends AppCompatActivity {
         return scores;
     }
 
+    /**
+     * Persistence Scores onStop app
+     */
     @Override
     protected void onStop() {
         try {
@@ -89,6 +93,6 @@ public class ScoreActivity extends AppCompatActivity {
             Log.e(getPackageName(), "Save failed");
         }
         super.onStop();
-        Log.d("Stop","onStop()");
+        Log.d("Stop", "onStop()");
     }
 }

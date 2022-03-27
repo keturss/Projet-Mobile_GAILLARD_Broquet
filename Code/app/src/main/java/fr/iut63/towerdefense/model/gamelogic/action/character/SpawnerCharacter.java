@@ -12,12 +12,13 @@ import fr.iut63.towerdefense.model.gamelogic.action.ISpawner;
 
 public class SpawnerCharacter implements ISpawner {
 
-    private GameState game;
-    private ILevel level;
+    private final GameState game;
+    private final ILevel level;
 
     /**
-     *Création du système de génération des ennemies en fonction des level recupérés
-     * @param game GameState
+     * Création du système de génération des ennemies en fonction des level recupérés
+     *
+     * @param game  GameState
      * @param level Level pointant sur le fichier des Characters
      */
     public SpawnerCharacter(GameState game, ILevel level) {

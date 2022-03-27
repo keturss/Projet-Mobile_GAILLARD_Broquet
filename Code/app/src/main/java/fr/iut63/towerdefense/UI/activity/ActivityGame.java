@@ -14,14 +14,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import fr.iut63.towerdefense.R;
+import fr.iut63.towerdefense.UI.view.DrawMap;
 import fr.iut63.towerdefense.UI.view.GameView;
 import fr.iut63.towerdefense.model.gamelogic.GameManager;
 import fr.iut63.towerdefense.model.gamelogic.action.IBuyer;
 import fr.iut63.towerdefense.model.gamelogic.action.tower.BuyerTower;
 import fr.iut63.towerdefense.model.gamelogic.map.GenerationMap;
-import fr.iut63.towerdefense.UI.view.DrawMap;
 import fr.iut63.towerdefense.model.gameloop.Loop;
 
+/***
+ * Activity representant le Jeux
+ */
 public class ActivityGame extends AppCompatActivity {
 
 
@@ -66,10 +69,10 @@ public class ActivityGame extends AppCompatActivity {
 
         AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
         builderGiveUpDialog.setTitle(R.string.give_up)
-                            .setMessage(R.string.give_up_ask)
-                            .setCancelable(false)
-                            .setPositiveButton(R.string.ok, (dialog, id) -> super.onBackPressed())
-                            .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
+                .setMessage(R.string.give_up_ask)
+                .setCancelable(false)
+                .setPositiveButton(R.string.ok, (dialog, id) -> super.onBackPressed())
+                .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
 
         dialog = builderGiveUpDialog.create();
         ((TextView) findViewById(R.id.life_number)).setText(String.valueOf(gameManager.getGame().getLives()));

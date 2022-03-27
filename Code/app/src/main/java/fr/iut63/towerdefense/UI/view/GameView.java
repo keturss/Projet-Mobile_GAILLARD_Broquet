@@ -1,28 +1,21 @@
 package fr.iut63.towerdefense.UI.view;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Rect;
 import android.view.MotionEvent;
 import android.view.View;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-
 import fr.iut63.towerdefense.model.gamelogic.GameManager;
-import fr.iut63.towerdefense.model.gamelogic.GameState;
 import fr.iut63.towerdefense.model.gameloop.ILoopListener;
 
+/**
+ * Essaie GameView
+ */
 public class GameView extends View implements ILoopListener {
     public GameManager world;
 
     private final double layoutWidth;
     private final double layoutHeight;
-
 
 
     public GameView(Context context, GameManager world, double layoutWidth, double layoutHeight) {

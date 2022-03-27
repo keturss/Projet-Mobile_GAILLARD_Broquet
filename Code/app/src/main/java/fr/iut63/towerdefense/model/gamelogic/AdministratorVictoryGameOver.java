@@ -9,14 +9,14 @@ import fr.iut63.towerdefense.model.gameloop.Loop;
  */
 public class AdministratorVictoryGameOver {
 
-    private GameState game;
-    private Loop loop;
-    private ILevel enemyFile;
+    private final GameState game;
+    private final Loop loop;
+    private final ILevel enemyFile;
 
     public AdministratorVictoryGameOver(GameState game, ILevel level, Loop boucle) {
         this.game = game;
         this.loop = boucle;
-        this.enemyFile=level;
+        this.enemyFile = level;
     }
 
     /**

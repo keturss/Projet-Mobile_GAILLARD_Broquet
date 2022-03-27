@@ -14,6 +14,9 @@ import com.google.android.material.textfield.TextInputLayout;
 import fr.iut63.towerdefense.R;
 import fr.iut63.towerdefense.UI.view.PopUpMessage;
 
+/**
+ * Activity Principal, Menu
+ */
 public class MainMenu extends AppCompatActivity {
 
     private AlertDialog dialogQuit;

@@ -1,6 +1,7 @@
 package fr.iut63.towerdefense.UI.fragment;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,16 +9,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import fr.iut63.towerdefense.R;
-import fr.iut63.towerdefense.UI.activity.MainMenu;
 import fr.iut63.towerdefense.UI.activity.ScoreActivity;
 import fr.iut63.towerdefense.UI.util.adaptater.ArrayToView;
 
-
+/**
+ * Détail Score Fragment
+ */
 public class MasterScoreFragment extends Fragment {
 
     private ScoreActivity activiteParente;

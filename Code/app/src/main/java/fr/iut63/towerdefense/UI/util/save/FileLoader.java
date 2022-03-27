@@ -8,10 +8,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 
-import fr.iut63.towerdefense.model.gamelogic.GameState;
-
+/**
+ * Persitence profonde file loader
+ */
 public class FileLoader implements ILoad{
     @Nullable
     @Override

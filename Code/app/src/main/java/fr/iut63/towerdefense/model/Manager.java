@@ -10,12 +10,12 @@ import fr.iut63.towerdefense.model.serialization.AdministratorPersistenceBinary;
  */
 public class Manager {
     private GameManager gameManager;
-    private ScoreRanking scoreRanking;
-    private AdministratorPersistence administratorPersistence;
+    private final ScoreRanking scoreRanking;
+    private final AdministratorPersistence administratorPersistence;
     private String pseudo;
 
-    public Manager(ScoreRanking scoreRanking){
-        this.scoreRanking=scoreRanking;
+    public Manager(ScoreRanking scoreRanking) {
+        this.scoreRanking = scoreRanking;
         administratorPersistence = new AdministratorPersistenceBinary();
         //ScreenController.getStage().setOnCloseRequest(event -> saveStates());
         //administratorPersistence.load(scoreRanking);

@@ -1,8 +1,6 @@
 package fr.iut63.towerdefense.model.gamelogic.action.tower;
 
 
-import android.util.Log;
-
 import fr.iut63.towerdefense.model.characters.tower.ClassicTower;
 import fr.iut63.towerdefense.model.characters.tower.Tower;
 import fr.iut63.towerdefense.model.gamelogic.GameState;
@@ -13,13 +11,14 @@ import fr.iut63.towerdefense.model.gamelogic.map.Map;
  * Class permettant d'acheter des tours
  */
 public class BuyerTower implements IBuyer {
-    private GameState game;
-    private Map gameMap;
+    private final GameState game;
+    private final Map gameMap;
 
     /**
      * Créé les services d'achat de tour sur la Map
-     * @param game  GamesState
-     * @param gameMap   Map
+     *
+     * @param game    GamesState
+     * @param gameMap Map
      */
     public BuyerTower(GameState game, Map gameMap) {
         this.game = game;

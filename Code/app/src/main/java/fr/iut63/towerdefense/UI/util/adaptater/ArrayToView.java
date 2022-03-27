@@ -1,6 +1,5 @@
 package fr.iut63.towerdefense.UI.util.adaptater;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -13,6 +12,9 @@ import java.util.ArrayList;
 import fr.iut63.towerdefense.R;
 import fr.iut63.towerdefense.model.gamelogic.GameState;
 
+/**
+ * Array GameState adapt for RecyclerView
+ */
 public class ArrayToView extends RecyclerView.Adapter {
 
     private ArrayList<GameState> scores = new ArrayList<>();

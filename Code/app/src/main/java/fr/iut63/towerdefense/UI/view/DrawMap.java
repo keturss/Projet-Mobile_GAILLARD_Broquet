@@ -9,18 +9,20 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.iut63.towerdefense.model.gamelogic.map.Map;
 import fr.iut63.towerdefense.UI.activity.ActivityGame;
+import fr.iut63.towerdefense.model.gamelogic.map.Map;
 
+/**
+ * Drawmap Barbare
+ */
 public class DrawMap {
 
-    private Map map;
+    private final Map map;
     private final int mapH;
     private final int mapW;
 
     private final ActivityGame activityGame;
     private final List<Bitmap> tiles;
-
 
 
     public DrawMap(ActivityGame context, Map mapTile) {

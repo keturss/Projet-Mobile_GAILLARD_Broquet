@@ -6,7 +6,7 @@ import java.util.LinkedList;
  * Classe LoopListener
  */
 public abstract class LoopListener {
-    private LinkedList<ILoopListener> observatory = new LinkedList<>();
+    private final LinkedList<ILoopListener> observatory = new LinkedList<>();
 
     public void subscribe(ILoopListener listener){
         observatory.add(listener);

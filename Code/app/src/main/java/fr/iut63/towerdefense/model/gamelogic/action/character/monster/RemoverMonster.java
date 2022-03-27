@@ -1,7 +1,7 @@
 package fr.iut63.towerdefense.model.gamelogic.action.character.monster;
 
-import fr.iut63.towerdefense.model.characters.monster.Monster;
 import fr.iut63.towerdefense.model.characters.Character;
+import fr.iut63.towerdefense.model.characters.monster.Monster;
 import fr.iut63.towerdefense.model.gamelogic.GameState;
 import fr.iut63.towerdefense.model.gamelogic.action.IRemover;
 
@@ -10,7 +10,7 @@ import fr.iut63.towerdefense.model.gamelogic.action.IRemover;
  * Classe pour supprimer des monstres
  */
 public class RemoverMonster implements IRemover {
-    private GameState game;
+    private final GameState game;
 
     public RemoverMonster(GameState game) {
         this.game = game;

@@ -9,7 +9,7 @@ import fr.iut63.towerdefense.model.characters.tower.Tower;
  * Classe permettant de faire attendre la tour durant le temps de construction
  */
 public class WaitingBuild implements Runnable{
-    private Tower tower;
+    private final Tower tower;
 
     /**
      * Créé une attente pour une construction de Tour

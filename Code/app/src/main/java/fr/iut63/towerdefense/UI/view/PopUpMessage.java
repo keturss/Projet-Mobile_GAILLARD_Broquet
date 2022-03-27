@@ -7,15 +7,18 @@ import android.widget.TextView;
 
 import fr.iut63.towerdefense.R;
 
-
+/**
+ * Welcome message
+ */
 public class PopUpMessage extends Dialog {
 
     private String title;
     private String subTitle;
-    private Button yesButton;
-    private TextView titleView,subTitleView;
+    private final Button yesButton;
+    private final TextView titleView;
+    private final TextView subTitleView;
 
-    public PopUpMessage(Activity activity){
+    public PopUpMessage(Activity activity) {
         super(activity, R.style.Theme_AppCompat_DayNight_Dialog);
         setContentView(R.layout.my_popup);
         this.title = "Mon titre";

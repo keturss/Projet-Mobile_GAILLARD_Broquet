@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import fr.iut63.towerdefense.R;
 
+/**
+ * Activité parmétre
+ */
 public class ParametersMenu extends AppCompatActivity {
 
     @Override
