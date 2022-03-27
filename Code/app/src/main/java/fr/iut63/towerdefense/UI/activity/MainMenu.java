@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 import fr.iut63.towerdefense.R;
 
 public class MainMenu extends AppCompatActivity {
@@ -28,11 +30,19 @@ public class MainMenu extends AppCompatActivity {
         Button buttonParameters = findViewById(R.id.menu_buttonParam);
         buttonParameters.setOnClickListener(this::onClickParam);
 
-        Button buttonScores = findViewById(R.id.menu_buttonScore);
+        Button buttonScores = findViewById(R.id.achatButton);
         buttonScores.setOnClickListener(this::onClickScore);
 
+        //Button buttonPlay = findViewById(R.id.menu_buttonPlay);
+        //buttonPlay.setOnClickListener(this::onClickPlay);
+
         Button buttonPlay = findViewById(R.id.menu_buttonPlay);
-        buttonPlay.setOnClickListener(this::onClickPlay);
+        buttonPlay.setOnClickListener(e -> {
+            TextInputLayout nicknameTextInput = findViewById(R.id.nicknameTextInput);
+            String nickname = nicknameTextInput.getEditText().getText().toString();
+            Intent intent = ActivityGame.newIntent(this, nickname);
+            startActivity(intent);
+        });
 
         AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
         builderGiveUpDialog.setTitle(R.string.menu_buttonQuit)
@@ -107,15 +117,6 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /**
-     * Méthode appelée lors du click sur le bouton jouer
-     * Envoie sur la vue du jeu
-     * @param view Bouton clické
-     */
-    private void onClickPlay(View view) {
-        Intent intent = new Intent(this, ActivityGame.class);
-        startActivity(intent);
-    }
 
     private void onClickScore(View view) {
         Intent intent = new Intent(this, ScoreActivity.class);

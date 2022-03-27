@@ -50,14 +50,14 @@
         android:layout_height="wrap_content"
         android:text="@string/menu_buttonQuit"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/menu_buttonScore"
+        app:layout_constraintBottom_toBottomOf="@+id/achatButton"
         app:layout_constraintEnd_toEndOf="@+id/menu_buttonParam"
         app:layout_constraintStart_toStartOf="@+id/menu_buttonParam"
-        app:layout_constraintTop_toTopOf="@+id/menu_buttonScore"
+        app:layout_constraintTop_toTopOf="@+id/achatButton"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/menu_buttonScore"
+        android:id="@+id/achatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_buttonScore"

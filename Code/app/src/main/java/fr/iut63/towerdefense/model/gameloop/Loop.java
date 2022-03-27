@@ -4,6 +4,8 @@ import static java.lang.Thread.sleep;
 
 import java.util.logging.Handler;
 
+import fr.iut63.towerdefense.UI.view.GameView;
+
 /**
  * Boucle de jeu
  */
@@ -49,5 +51,9 @@ public class Loop extends LoopListener implements Runnable {
 
     private void beep(int timer) {
         notify(timer);
+    }
+
+    public void setView(GameView gameview) {
+        subscribe(gameview);
     }
 }

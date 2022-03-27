@@ -2,4 +2,6 @@
 <resources>
     <dimen name="sub_title">25dp</dimen>
     <dimen name="clasic_text">20dp</dimen>
+    <dimen name="margin_button_left_and_right">64dp</dimen>
+    <dimen name="margin_top_and_bottom">128dp</dimen>
 </resources>
