@@ -48,18 +48,17 @@ public class ActivityGame extends AppCompatActivity {
         height = displayMetrics.heightPixels;
         width = displayMetrics.widthPixels;
 
-
+        gamePart = findViewById(R.id.gamePart);
 
         gameManager = new GameManager("keturss", new GenerationMap(width, height));
 
 
-        gameview = new GameView(this, gameManager, width, height);
+        gameview = new GameView(this, gameManager, width, height,gamePart);
+
 
         loop = gameManager.getLoop();
         loop.setView(gameview);
-        linearLayout.addView(gameview);
-
-        //gamePart = findViewById(R.id.gamePart);
+        gamePart.addView(gameview);
 
 
         AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
