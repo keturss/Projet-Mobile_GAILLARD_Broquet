@@ -33,7 +33,6 @@ public class ScoreActivity extends AppCompatActivity {
 
     private RecyclerView scoresRecyclerView;
     private TextView textViewHUD;
-    private ArrayList<GameState> scoresView = new ArrayList<>();
 
 
     @Override
