@@ -19,7 +19,6 @@ import fr.iut63.towerdefense.UI.view.DrawMap;
 
 public class ActivityGame extends AppCompatActivity {
 
-
     private ConstraintLayout gamePart;
     private GameManager gameManager;
     private DrawMap drawMap;
@@ -85,14 +84,5 @@ public class ActivityGame extends AppCompatActivity {
         return gamePart;
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
 }
 
