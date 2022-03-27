@@ -3,6 +3,7 @@ package fr.iut63.towerdefense.UI.activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -11,21 +12,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import fr.iut63.towerdefense.R;
+import fr.iut63.towerdefense.UI.view.GameView;
 import fr.iut63.towerdefense.model.gamelogic.GameManager;
 import fr.iut63.towerdefense.model.gamelogic.action.IBuyer;
 import fr.iut63.towerdefense.model.gamelogic.action.tower.BuyerTower;
 import fr.iut63.towerdefense.model.gamelogic.map.GenerationMap;
 import fr.iut63.towerdefense.UI.view.DrawMap;
+import fr.iut63.towerdefense.model.gameloop.Loop;
 
 public class ActivityGame extends AppCompatActivity {
 
 
+    private LinearLayout linearLayout;
     private ConstraintLayout gamePart;
-    private GameManager gameManager;
     private DrawMap drawMap;
+    private GameView gameview;
 
     private AlertDialog dialog;
 
+    private Loop loop;
+
+    private GameManager gameManager;
     private int height;
     private int width;
 
@@ -33,21 +40,27 @@ public class ActivityGame extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_game);
+
 
         final DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         height = displayMetrics.heightPixels;
         width = displayMetrics.widthPixels;
 
+
+
         gameManager = new GameManager("keturss", new GenerationMap(width, height));
 
-        gamePart = findViewById(R.id.gamePart);
 
-        drawMap = new DrawMap(this, gameManager.getGameMap());
-        gameManager.start();
-        drawMap.draw();
+        gameview = new GameView(this, gameManager, width, height);
+
+        loop = gameManager.getLoop();
+        loop.setView(gameview);
+        linearLayout.addView(gameview);
+
+        //gamePart = findViewById(R.id.gamePart);
+
 
         AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
         builderGiveUpDialog.setTitle(R.string.give_up)
