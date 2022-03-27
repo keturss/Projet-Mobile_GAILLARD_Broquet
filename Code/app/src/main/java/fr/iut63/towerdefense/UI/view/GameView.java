@@ -1,6 +1,7 @@
 package fr.iut63.towerdefense.UI.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -62,4 +63,5 @@ public class GameView extends View implements ILoopListener {
     public void update(int timer) {
         postInvalidate();
     }
+
 }

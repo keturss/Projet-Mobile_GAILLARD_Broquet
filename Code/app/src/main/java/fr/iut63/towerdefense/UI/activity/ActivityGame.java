@@ -1,5 +1,7 @@
 package fr.iut63.towerdefense.UI.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
@@ -49,7 +51,6 @@ public class ActivityGame extends AppCompatActivity {
         width = displayMetrics.widthPixels;
 
 
-
         gameManager = new GameManager("keturss", new GenerationMap(width, height));
 
 
@@ -57,9 +58,8 @@ public class ActivityGame extends AppCompatActivity {
 
         loop = gameManager.getLoop();
         loop.setView(gameview);
-        linearLayout.addView(gameview);
 
-        //gamePart = findViewById(R.id.gamePart);
+        gamePart = findViewById(R.id.gamePart);
 
 
         AlertDialog.Builder builderGiveUpDialog = new AlertDialog.Builder(this);
@@ -101,11 +101,22 @@ public class ActivityGame extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        String nickname = getIntent().getStringExtra("nickname");
+        if (nickname.equals("")) {
+            nickname = "guest";
+        }
+        ((TextView) findViewById(R.id.pseudoView)).setText(nickname);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    public static Intent newIntent(Context context, String nickname){
+        Intent intent = new Intent(context, ActivityGame.class);
+        intent.putExtra("nickname",nickname);
+        return intent;
     }
 }
 

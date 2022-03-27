@@ -5,31 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nicknameTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_button_left_and_right"
+        android:layout_marginEnd="@dimen/margin_button_left_and_right"
+        android:layout_marginBottom="@dimen/margin_top_and_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Tap to enter a name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/menu_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title"
-        android:textSize="40sp"
         android:gravity="center"
-        android:textStyle="bold"
+        android:text="@string/title"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/menu_buttonPlay"
         app:layout_constraintEnd_toEndOf="@+id/menu_buttonPlay"
         app:layout_constraintStart_toStartOf="@+id/menu_buttonPlay"
-        app:layout_constraintTop_toBottomOf="@+id/menu_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/menu_logo"
+        app:layout_constraintVertical_bias="0.089" />
 
     <ImageView
         android:id="@+id/menu_logo"
         android:layout_width="168dp"
         android:layout_height="163dp"
+        android:src="@drawable/tower"
         app:layout_constraintBottom_toTopOf="@+id/menu_buttonPlay"
-        app:layout_constraintEnd_toEndOf="@+id/menu_title"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/menu_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.391"
-        android:src="@drawable/tower"/>
+        app:layout_constraintVertical_bias="0.22" />
 
     <Button
         android:id="@+id/menu_buttonParam"
@@ -42,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/menu_buttonPlay" />
 
     <Button
-        android:id="@+id/menu_buttonScore"
+        android:id="@+id/achatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_buttonScore"
@@ -57,9 +75,9 @@
         android:layout_height="wrap_content"
         android:text="@string/menu_buttonQuit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/menu_buttonScore"
-        app:layout_constraintStart_toStartOf="@+id/menu_buttonScore"
-        app:layout_constraintTop_toBottomOf="@+id/menu_buttonScore"/>
+        app:layout_constraintEnd_toEndOf="@+id/achatButton"
+        app:layout_constraintStart_toStartOf="@+id/achatButton"
+        app:layout_constraintTop_toBottomOf="@+id/achatButton" />
 
     <Button
         android:id="@+id/menu_buttonPlay"
@@ -70,7 +88,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.674" />
